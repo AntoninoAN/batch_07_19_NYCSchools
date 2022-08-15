@@ -5,13 +5,13 @@ import com.google.gson.annotations.SerializedName
 
 data class NYCSchool(
     val dbn: String,
-    val school_name: String,
-    val location: String,
-    val phone_number: String,
-    val fax_number: String,
-    val city: String,
-    val latitude: String,
-    val longitude: String
+    val school_name: String? = "N/A",
+    val location: String?= "N/A",
+    val phone_number: String?,
+    val fax_number: String?,
+    val city: String?,
+    val latitude: String?= "N/A",
+    val longitude: String?= "N/A"
 )
 
 data class NYCSatScore(

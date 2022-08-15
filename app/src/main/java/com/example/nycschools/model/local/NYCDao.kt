@@ -21,6 +21,6 @@ interface NYCDao {
     @Insert(entity = SchoolSatEntity::class, onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertSchoolSat(schoolSatEntity: SchoolSatEntity)
 
-    @Query(value = "SELECT dddd FROM school_data")
+    @Query(value = "SELECT * FROM school_sat")
     suspend fun getPresentationData(): List<SchoolSatEntity>
 }

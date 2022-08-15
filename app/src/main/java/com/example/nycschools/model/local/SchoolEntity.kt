@@ -1,8 +1,10 @@
 package com.example.nycschools.model.local
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
 @Entity(tableName = "school_table")
 data class SchoolEntity(
@@ -29,6 +31,7 @@ data class SatEntity(
     val sat_writing_avg_score: String
 )
 @Entity(tableName = "school_sat")
+@Parcelize
 data class SchoolSatEntity(
     @PrimaryKey
     val dbn: String,
@@ -43,4 +46,4 @@ data class SchoolSatEntity(
     val city: String,
     val latitude: String,
     val longitude: String
-)
+): Parcelable
